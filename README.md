@@ -91,6 +91,10 @@ Run any agent, then open <http://localhost:6006>.
 For [Langfuse](https://langfuse.com) point the endpoint at `https://cloud.langfuse.com/api/public/otel` and set
 `OTEL_EXPORTER_OTLP_HEADERS="Authorization=Basic <base64(public:secret)>"`.
 
+There is a ready-made demo app with a support agent, two tools and a sub-agent at
+[literaj/laravel-ai-otel-demo](https://github.com/literaj/laravel-ai-otel-demo). It runs with `--fake`, so no API
+key is needed to see a full trace.
+
 ## What is recorded
 
 | Span | Kind | Created from | Key attributes |
