@@ -22,7 +22,10 @@ invoke_agent SupportAgent              INTERNAL   1.9 s   gen_ai.usage.input_tok
 ```
 
 Which step was slow, which tool failed, how many tokens each turn burned, and how a sub-agent's work nests under the
-tool that delegated to it. Works with Arize Phoenix, Langfuse, Grafana Tempo, Jaeger, Datadog, Honeycomb, or anything
+tool that delegated to it. Here is a real run of the [demo app](https://github.com/cristea-iulian/laravel-ai-otel-demo)
+in Arize Phoenix:
+
+![A Laravel AI agent run in Arize Phoenix: invoke_agent, chat and execute_tool spans with a nested sub-agent](docs/phoenix-trace.gif) Works with Arize Phoenix, Langfuse, Grafana Tempo, Jaeger, Datadog, Honeycomb, or anything
 else that speaks OTLP, because the spans use the standard `gen_ai.*` attributes those tools already understand.
 
 Prompts and completions are **never recorded unless you opt in**. See [Privacy](#privacy-and-content-capture).
