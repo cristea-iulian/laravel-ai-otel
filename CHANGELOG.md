@@ -1,6 +1,6 @@
 # Changelog
 
-All notable changes to `literaj/laravel-ai-otel` are documented here.
+All notable changes to `cristea-iulian/laravel-ai-otel` are documented here.
 
 ## Unreleased
 

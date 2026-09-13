@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Literaj\AiOtel\Laravel;
+namespace CristeaIulian\AiOtel\Laravel;
 
 /**
  * Maps Laravel AI driver names to `gen_ai.provider.name` values.

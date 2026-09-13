@@ -2,8 +2,13 @@
 
 declare(strict_types=1);
 
-namespace Literaj\AiOtel;
+namespace CristeaIulian\AiOtel;
 
+use CristeaIulian\AiOtel\Contracts\Recorder;
+use CristeaIulian\AiOtel\Contracts\Redactor;
+use CristeaIulian\AiOtel\Laravel\AiEventListener;
+use CristeaIulian\AiOtel\Recorders\SpanRecorder;
+use CristeaIulian\AiOtel\Support\ContentCapture;
 use Illuminate\Contracts\Container\Container;
 use Illuminate\Contracts\Events\Dispatcher;
 use Illuminate\Contracts\Foundation\Application;
@@ -25,11 +30,6 @@ use Laravel\Ai\Events\ToolApprovalRequested;
 use Laravel\Ai\Events\ToolApprovalResolved;
 use Laravel\Ai\Events\ToolFailed;
 use Laravel\Ai\Events\ToolInvoked;
-use Literaj\AiOtel\Contracts\Recorder;
-use Literaj\AiOtel\Contracts\Redactor;
-use Literaj\AiOtel\Laravel\AiEventListener;
-use Literaj\AiOtel\Recorders\SpanRecorder;
-use Literaj\AiOtel\Support\ContentCapture;
 use OpenTelemetry\API\Common\Time\Clock;
 use OpenTelemetry\API\Common\Time\ClockInterface;
 use Psr\Log\LoggerInterface;

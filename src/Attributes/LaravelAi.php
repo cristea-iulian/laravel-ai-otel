@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Literaj\AiOtel\Attributes;
+namespace CristeaIulian\AiOtel\Attributes;
 
 /**
  * Attributes specific to the Laravel AI SDK that have no GenAI equivalent.

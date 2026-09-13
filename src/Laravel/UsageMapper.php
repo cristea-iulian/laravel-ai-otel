@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Literaj\AiOtel\Laravel;
+namespace CristeaIulian\AiOtel\Laravel;
 
+use CristeaIulian\AiOtel\Data\Usage;
 use Laravel\Ai\Responses\Data\Usage as SdkUsage;
-use Literaj\AiOtel\Data\Usage;
 
 final class UsageMapper
 {

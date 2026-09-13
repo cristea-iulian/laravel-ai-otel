@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Literaj\AiOtel\Support;
+namespace CristeaIulian\AiOtel\Support;
 
-use Literaj\AiOtel\Attributes\GenAi;
-use Literaj\AiOtel\Data\Usage;
+use CristeaIulian\AiOtel\Attributes\GenAi;
+use CristeaIulian\AiOtel\Data\Usage;
 use Throwable;
 
 /**

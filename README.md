@@ -1,11 +1,11 @@
 # OpenTelemetry tracing for the Laravel AI SDK
 
-[![Tests](https://github.com/literaj/laravel-ai-otel/actions/workflows/tests.yml/badge.svg)](https://github.com/literaj/laravel-ai-otel/actions/workflows/tests.yml)
-[![Nightly against laravel/ai dev](https://github.com/literaj/laravel-ai-otel/actions/workflows/nightly.yml/badge.svg)](https://github.com/literaj/laravel-ai-otel/actions/workflows/nightly.yml)
-[![Latest Version](https://img.shields.io/packagist/v/literaj/laravel-ai-otel.svg)](https://packagist.org/packages/literaj/laravel-ai-otel)
-[![License](https://img.shields.io/packagist/l/literaj/laravel-ai-otel.svg)](LICENSE.md)
+[![Tests](https://github.com/cristea-iulian/laravel-ai-otel/actions/workflows/tests.yml/badge.svg)](https://github.com/cristea-iulian/laravel-ai-otel/actions/workflows/tests.yml)
+[![Nightly against laravel/ai dev](https://github.com/cristea-iulian/laravel-ai-otel/actions/workflows/nightly.yml/badge.svg)](https://github.com/cristea-iulian/laravel-ai-otel/actions/workflows/nightly.yml)
+[![Latest Version](https://img.shields.io/packagist/v/cristea-iulian/laravel-ai-otel.svg)](https://packagist.org/packages/cristea-iulian/laravel-ai-otel)
+[![License](https://img.shields.io/packagist/l/cristea-iulian/laravel-ai-otel.svg)](LICENSE.md)
 
-`literaj/laravel-ai-otel` turns the events the [Laravel AI SDK](https://laravel.com/docs/ai-sdk) already fires into
+`cristea-iulian/laravel-ai-otel` turns the events the [Laravel AI SDK](https://laravel.com/docs/ai-sdk) already fires into
 [OpenTelemetry](https://opentelemetry.io) spans that follow the
 [GenAI semantic conventions](https://github.com/open-telemetry/semantic-conventions-genai).
 Point it at any OTLP backend and you get, for every agent run:
@@ -37,7 +37,7 @@ Prompts and completions are **never recorded unless you opt in**. See [Privacy](
 ## Installation
 
 ```bash
-composer require literaj/laravel-ai-otel
+composer require cristea-iulian/laravel-ai-otel
 ```
 
 The package registers itself. It depends only on the lightweight OpenTelemetry **API**; how spans leave your
@@ -92,7 +92,7 @@ For [Langfuse](https://langfuse.com) point the endpoint at `https://cloud.langfu
 `OTEL_EXPORTER_OTLP_HEADERS="Authorization=Basic <base64(public:secret)>"`.
 
 There is a ready-made demo app with a support agent, two tools and a sub-agent at
-[literaj/laravel-ai-otel-demo](https://github.com/literaj/laravel-ai-otel-demo). It runs with `--fake`, so no API
+[cristea-iulian/laravel-ai-otel-demo](https://github.com/cristea-iulian/laravel-ai-otel-demo). It runs with `--fake`, so no API
 key is needed to see a full trace.
 
 ## What is recorded
@@ -144,7 +144,7 @@ AI_OTEL_CAPTURE_MAX_LENGTH=8192
 ```
 
 ```php
-use Literaj\AiOtel\Contracts\Redactor;
+use CristeaIulian\AiOtel\Contracts\Redactor;
 
 class PiiRedactor implements Redactor
 {
@@ -192,7 +192,7 @@ php artisan vendor:publish --tag=ai-otel-config
 | `activate_scopes` | | `true` | Make agent, step and tool spans the active context while they run. |
 | `capture.content` | `OTEL_INSTRUMENTATION_GENAI_CAPTURE_MESSAGE_CONTENT` | `false` | Record prompts, outputs, tool arguments and results. |
 | `capture.max_length` | `AI_OTEL_CAPTURE_MAX_LENGTH` | `8192` | Per-string truncation when capturing. |
-| `capture.redactor` | | `null` | Class implementing `Literaj\AiOtel\Contracts\Redactor`. |
+| `capture.redactor` | | `null` | Class implementing `CristeaIulian\AiOtel\Contracts\Redactor`. |
 | `operations.agents` | | `true` | Trace agent runs. |
 | `operations.embeddings` | | `true` | Trace embeddings. |
 
@@ -206,11 +206,11 @@ php artisan vendor:publish --tag=ai-otel-config
 
 ### Custom drivers
 
-Anything can consume the telemetry by implementing `Literaj\AiOtel\Contracts\Recorder`, which receives SDK-agnostic
+Anything can consume the telemetry by implementing `CristeaIulian\AiOtel\Contracts\Recorder`, which receives SDK-agnostic
 events (`InvocationStarted`, `StepEnded`, `ToolFailed`, `EmbeddingsGenerated`, …):
 
 ```php
-use Literaj\AiOtel\RecorderManager;
+use CristeaIulian\AiOtel\RecorderManager;
 
 app(RecorderManager::class)->extend('metrics', fn ($app, array $config) => new MyMetricsRecorder);
 ```

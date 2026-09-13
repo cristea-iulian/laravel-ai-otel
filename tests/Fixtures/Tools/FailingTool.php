@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Literaj\AiOtel\Tests\Fixtures\Tools;
+namespace CristeaIulian\AiOtel\Tests\Fixtures\Tools;
 
 use Illuminate\Contracts\JsonSchema\JsonSchema;
 use Laravel\Ai\Contracts\Tool;

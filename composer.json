@@ -1,5 +1,5 @@
 {
-    "name": "literaj/laravel-ai-otel",
+    "name": "cristea-iulian/laravel-ai-otel",
     "description": "OpenTelemetry tracing for the Laravel AI SDK, following the OpenTelemetry GenAI semantic conventions.",
     "keywords": ["laravel", "ai", "opentelemetry", "otel", "tracing", "observability", "gen_ai", "llm", "agents", "langfuse", "phoenix"],
     "license": "MIT",
@@ -7,7 +7,7 @@
     "authors": [
         {
             "name": "Iulian Cristea",
-            "homepage": "https://github.com/literaj"
+            "homepage": "https://github.com/cristea-iulian"
         }
     ],
     "require": {
@@ -36,18 +36,18 @@
     },
     "autoload": {
         "psr-4": {
-            "Literaj\\AiOtel\\": "src/"
+            "CristeaIulian\\AiOtel\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Literaj\\AiOtel\\Tests\\": "tests/"
+            "CristeaIulian\\AiOtel\\Tests\\": "tests/"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "Literaj\\AiOtel\\AiOtelServiceProvider"
+                "CristeaIulian\\AiOtel\\AiOtelServiceProvider"
             ]
         }
     },

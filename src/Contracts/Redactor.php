@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Literaj\AiOtel\Contracts;
+namespace CristeaIulian\AiOtel\Contracts;
 
 /**
  * Rewrites captured content before it is written to telemetry.

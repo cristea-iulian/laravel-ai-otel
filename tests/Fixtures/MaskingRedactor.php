@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Literaj\AiOtel\Tests\Fixtures;
+namespace CristeaIulian\AiOtel\Tests\Fixtures;
 
-use Literaj\AiOtel\Contracts\Redactor;
+use CristeaIulian\AiOtel\Contracts\Redactor;
 
 class MaskingRedactor implements Redactor
 {

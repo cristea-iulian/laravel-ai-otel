@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace Literaj\AiOtel\Tests;
+namespace CristeaIulian\AiOtel\Tests;
 
+use CristeaIulian\AiOtel\AiOtelServiceProvider;
 use Illuminate\Support\Collection;
 use Laravel\Ai\AiServiceProvider;
-use Literaj\AiOtel\AiOtelServiceProvider;
 use OpenTelemetry\API\Trace\TracerProviderInterface;
 use OpenTelemetry\SDK\Trace\ImmutableSpan;
 use OpenTelemetry\SDK\Trace\SpanExporter\InMemoryExporter;

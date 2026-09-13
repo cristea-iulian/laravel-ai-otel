@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
+use CristeaIulian\AiOtel\Tests\Fixtures\Agents\AssistantAgent;
 use Illuminate\Contracts\Events\Dispatcher;
 use Laravel\Ai\Events\PromptingAgent;
-use Literaj\AiOtel\Tests\Fixtures\Agents\AssistantAgent;
 
 test('nothing is recorded and no listeners are registered when the package is disabled', function (): void {
     expect($this->app->make(Dispatcher::class)->hasListeners(PromptingAgent::class))->toBeFalse();

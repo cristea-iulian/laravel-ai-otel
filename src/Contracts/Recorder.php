@@ -2,21 +2,21 @@
 
 declare(strict_types=1);
 
-namespace Literaj\AiOtel\Contracts;
+namespace CristeaIulian\AiOtel\Contracts;
 
-use Literaj\AiOtel\Data\ApprovalRequested;
-use Literaj\AiOtel\Data\ApprovalResolved;
-use Literaj\AiOtel\Data\EmbeddingsGenerated;
-use Literaj\AiOtel\Data\Failover;
-use Literaj\AiOtel\Data\InvocationEnded;
-use Literaj\AiOtel\Data\InvocationFailed;
-use Literaj\AiOtel\Data\InvocationStarted;
-use Literaj\AiOtel\Data\StepEnded;
-use Literaj\AiOtel\Data\StepFailed;
-use Literaj\AiOtel\Data\StepStarted;
-use Literaj\AiOtel\Data\ToolEnded;
-use Literaj\AiOtel\Data\ToolFailed;
-use Literaj\AiOtel\Data\ToolStarted;
+use CristeaIulian\AiOtel\Data\ApprovalRequested;
+use CristeaIulian\AiOtel\Data\ApprovalResolved;
+use CristeaIulian\AiOtel\Data\EmbeddingsGenerated;
+use CristeaIulian\AiOtel\Data\Failover;
+use CristeaIulian\AiOtel\Data\InvocationEnded;
+use CristeaIulian\AiOtel\Data\InvocationFailed;
+use CristeaIulian\AiOtel\Data\InvocationStarted;
+use CristeaIulian\AiOtel\Data\StepEnded;
+use CristeaIulian\AiOtel\Data\StepFailed;
+use CristeaIulian\AiOtel\Data\StepStarted;
+use CristeaIulian\AiOtel\Data\ToolEnded;
+use CristeaIulian\AiOtel\Data\ToolFailed;
+use CristeaIulian\AiOtel\Data\ToolStarted;
 
 /**
  * A sink for SDK-agnostic GenAI telemetry.

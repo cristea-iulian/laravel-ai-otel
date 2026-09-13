@@ -2,25 +2,25 @@
 
 declare(strict_types=1);
 
-namespace Literaj\AiOtel\Recorders;
+namespace CristeaIulian\AiOtel\Recorders;
 
-use Literaj\AiOtel\Attributes\GenAi;
-use Literaj\AiOtel\Attributes\LaravelAi;
-use Literaj\AiOtel\Contracts\Recorder;
-use Literaj\AiOtel\Data\ApprovalRequested;
-use Literaj\AiOtel\Data\ApprovalResolved;
-use Literaj\AiOtel\Data\EmbeddingsGenerated;
-use Literaj\AiOtel\Data\Failover;
-use Literaj\AiOtel\Data\InvocationEnded;
-use Literaj\AiOtel\Data\InvocationFailed;
-use Literaj\AiOtel\Data\InvocationStarted;
-use Literaj\AiOtel\Data\StepEnded;
-use Literaj\AiOtel\Data\StepFailed;
-use Literaj\AiOtel\Data\StepStarted;
-use Literaj\AiOtel\Data\ToolEnded;
-use Literaj\AiOtel\Data\ToolFailed;
-use Literaj\AiOtel\Data\ToolStarted;
-use Literaj\AiOtel\Support\Attributes;
+use CristeaIulian\AiOtel\Attributes\GenAi;
+use CristeaIulian\AiOtel\Attributes\LaravelAi;
+use CristeaIulian\AiOtel\Contracts\Recorder;
+use CristeaIulian\AiOtel\Data\ApprovalRequested;
+use CristeaIulian\AiOtel\Data\ApprovalResolved;
+use CristeaIulian\AiOtel\Data\EmbeddingsGenerated;
+use CristeaIulian\AiOtel\Data\Failover;
+use CristeaIulian\AiOtel\Data\InvocationEnded;
+use CristeaIulian\AiOtel\Data\InvocationFailed;
+use CristeaIulian\AiOtel\Data\InvocationStarted;
+use CristeaIulian\AiOtel\Data\StepEnded;
+use CristeaIulian\AiOtel\Data\StepFailed;
+use CristeaIulian\AiOtel\Data\StepStarted;
+use CristeaIulian\AiOtel\Data\ToolEnded;
+use CristeaIulian\AiOtel\Data\ToolFailed;
+use CristeaIulian\AiOtel\Data\ToolStarted;
+use CristeaIulian\AiOtel\Support\Attributes;
 use Psr\Log\LoggerInterface;
 use Throwable;
 

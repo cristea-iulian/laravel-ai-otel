@@ -2,8 +2,8 @@
 
 declare(strict_types=1);
 
-use Literaj\AiOtel\Support\ContentCapture;
-use Literaj\AiOtel\Tests\Fixtures\MaskingRedactor;
+use CristeaIulian\AiOtel\Support\ContentCapture;
+use CristeaIulian\AiOtel\Tests\Fixtures\MaskingRedactor;
 
 test('disabled capture returns null for everything', function (): void {
     $capture = ContentCapture::disabled();

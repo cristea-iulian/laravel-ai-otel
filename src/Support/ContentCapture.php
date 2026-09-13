@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Literaj\AiOtel\Support;
+namespace CristeaIulian\AiOtel\Support;
 
+use CristeaIulian\AiOtel\Contracts\Redactor;
 use JsonSerializable;
-use Literaj\AiOtel\Contracts\Redactor;
 use Stringable;
 
 /**

@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Literaj\AiOtel\Tests;
+namespace CristeaIulian\AiOtel\Tests;
 
 abstract class DisabledTestCase extends TestCase
 {

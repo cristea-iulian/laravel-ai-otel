@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Literaj\AiOtel\Data;
+namespace CristeaIulian\AiOtel\Data;
 
 final readonly class StepStarted
 {

@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Literaj\AiOtel\Laravel;
+namespace CristeaIulian\AiOtel\Laravel;
 
 use Laravel\Ai\Messages\AssistantMessage;
 use Laravel\Ai\Messages\Message;

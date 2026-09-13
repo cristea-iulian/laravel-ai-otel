@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
+use CristeaIulian\AiOtel\Attributes\GenAi;
+use CristeaIulian\AiOtel\Attributes\LaravelAi;
 use Laravel\Ai\Embeddings;
-use Literaj\AiOtel\Attributes\GenAi;
-use Literaj\AiOtel\Attributes\LaravelAi;
 use OpenTelemetry\API\Trace\SpanKind;
 
 test('embeddings generation records an embeddings span', function (): void {

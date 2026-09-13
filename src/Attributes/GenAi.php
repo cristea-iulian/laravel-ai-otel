@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Literaj\AiOtel\Attributes;
+namespace CristeaIulian\AiOtel\Attributes;
 
 /**
  * Attribute names from the OpenTelemetry GenAI semantic conventions.

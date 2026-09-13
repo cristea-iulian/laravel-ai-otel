@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
+use CristeaIulian\AiOtel\Attributes\GenAi;
+use CristeaIulian\AiOtel\Support\ContentCapture;
+use CristeaIulian\AiOtel\Tests\Fixtures\Agents\ToolAgent;
+use CristeaIulian\AiOtel\Tests\Fixtures\MaskingRedactor;
 use Laravel\Ai\Responses\Data\ToolCall;
-use Literaj\AiOtel\Attributes\GenAi;
-use Literaj\AiOtel\Support\ContentCapture;
-use Literaj\AiOtel\Tests\Fixtures\Agents\ToolAgent;
-use Literaj\AiOtel\Tests\Fixtures\MaskingRedactor;
 
 function decode(string $json): mixed
 {

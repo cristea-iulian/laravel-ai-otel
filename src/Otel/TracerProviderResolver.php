@@ -2,14 +2,14 @@
 
 declare(strict_types=1);
 
-namespace Literaj\AiOtel\Otel;
+namespace CristeaIulian\AiOtel\Otel;
 
+use CristeaIulian\AiOtel\Exceptions\MissingOpenTelemetrySdkException;
 use Illuminate\Contracts\Container\Container;
 use Illuminate\Contracts\Events\Dispatcher;
 use Illuminate\Contracts\Foundation\Application;
 use Illuminate\Queue\Events\JobProcessed;
 use InvalidArgumentException;
-use Literaj\AiOtel\Exceptions\MissingOpenTelemetrySdkException;
 use OpenTelemetry\API\Globals;
 use OpenTelemetry\API\Trace\NoopTracerProvider;
 use OpenTelemetry\API\Trace\TracerProviderInterface;

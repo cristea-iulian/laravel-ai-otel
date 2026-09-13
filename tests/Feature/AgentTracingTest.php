@@ -2,16 +2,16 @@
 
 declare(strict_types=1);
 
+use CristeaIulian\AiOtel\Attributes\GenAi;
+use CristeaIulian\AiOtel\Attributes\LaravelAi;
+use CristeaIulian\AiOtel\Tests\Fixtures\Agents\AssistantAgent;
+use CristeaIulian\AiOtel\Tests\Fixtures\Agents\OrchestratorAgent;
+use CristeaIulian\AiOtel\Tests\Fixtures\Agents\ResearchAgent;
+use CristeaIulian\AiOtel\Tests\Fixtures\Agents\ToolAgent;
 use Laravel\Ai\Responses\Data\Meta;
 use Laravel\Ai\Responses\Data\ToolCall;
 use Laravel\Ai\Responses\Data\Usage;
 use Laravel\Ai\Responses\TextResponse;
-use Literaj\AiOtel\Attributes\GenAi;
-use Literaj\AiOtel\Attributes\LaravelAi;
-use Literaj\AiOtel\Tests\Fixtures\Agents\AssistantAgent;
-use Literaj\AiOtel\Tests\Fixtures\Agents\OrchestratorAgent;
-use Literaj\AiOtel\Tests\Fixtures\Agents\ResearchAgent;
-use Literaj\AiOtel\Tests\Fixtures\Agents\ToolAgent;
 use OpenTelemetry\API\Trace\SpanKind;
 use OpenTelemetry\API\Trace\StatusCode;
 

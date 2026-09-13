@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Literaj\AiOtel\Recorders;
+namespace CristeaIulian\AiOtel\Recorders;
 
 /**
  * @internal

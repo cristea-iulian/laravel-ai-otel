@@ -2,19 +2,19 @@
 
 declare(strict_types=1);
 
-namespace Literaj\AiOtel;
+namespace CristeaIulian\AiOtel;
 
 use Closure;
+use CristeaIulian\AiOtel\Contracts\Recorder;
+use CristeaIulian\AiOtel\Otel\TracerProviderResolver;
+use CristeaIulian\AiOtel\Recorders\LogRecorder;
+use CristeaIulian\AiOtel\Recorders\NullRecorder;
+use CristeaIulian\AiOtel\Recorders\SpanRecorder;
+use CristeaIulian\AiOtel\Support\Version;
 use Illuminate\Contracts\Config\Repository;
 use Illuminate\Contracts\Container\Container;
 use Illuminate\Log\LogManager;
 use InvalidArgumentException;
-use Literaj\AiOtel\Contracts\Recorder;
-use Literaj\AiOtel\Otel\TracerProviderResolver;
-use Literaj\AiOtel\Recorders\LogRecorder;
-use Literaj\AiOtel\Recorders\NullRecorder;
-use Literaj\AiOtel\Recorders\SpanRecorder;
-use Literaj\AiOtel\Support\Version;
 use OpenTelemetry\API\Trace\TracerInterface;
 use Psr\Log\LoggerInterface;
 

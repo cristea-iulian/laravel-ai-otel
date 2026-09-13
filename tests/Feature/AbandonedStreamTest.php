@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
+use CristeaIulian\AiOtel\Attributes\LaravelAi;
+use CristeaIulian\AiOtel\Contracts\Recorder;
+use CristeaIulian\AiOtel\Recorders\SpanRecorder;
+use CristeaIulian\AiOtel\Tests\Fixtures\Agents\ToolAgent;
 use Laravel\Ai\Responses\Data\ToolCall;
-use Literaj\AiOtel\Attributes\LaravelAi;
-use Literaj\AiOtel\Contracts\Recorder;
-use Literaj\AiOtel\Recorders\SpanRecorder;
-use Literaj\AiOtel\Tests\Fixtures\Agents\ToolAgent;
 use OpenTelemetry\Context\Context;
 
 test('spans left open by an abandoned stream are closed and marked when the request terminates', function (): void {

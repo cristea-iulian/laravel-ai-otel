@@ -2,14 +2,14 @@
 
 declare(strict_types=1);
 
+use CristeaIulian\AiOtel\Attributes\GenAi;
+use CristeaIulian\AiOtel\Attributes\LaravelAi;
+use CristeaIulian\AiOtel\Contracts\Recorder;
+use CristeaIulian\AiOtel\Recorders\LogRecorder;
+use CristeaIulian\AiOtel\Tests\Fixtures\Agents\ToolAgent;
 use Illuminate\Log\Events\MessageLogged;
 use Illuminate\Support\Facades\Event;
 use Laravel\Ai\Responses\Data\ToolCall;
-use Literaj\AiOtel\Attributes\GenAi;
-use Literaj\AiOtel\Attributes\LaravelAi;
-use Literaj\AiOtel\Contracts\Recorder;
-use Literaj\AiOtel\Recorders\LogRecorder;
-use Literaj\AiOtel\Tests\Fixtures\Agents\ToolAgent;
 
 test('the log driver writes one entry per completed operation', function (): void {
     config()->set('ai-otel.driver', 'log');

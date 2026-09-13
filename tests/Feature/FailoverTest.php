@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
+use CristeaIulian\AiOtel\Attributes\GenAi;
+use CristeaIulian\AiOtel\Attributes\LaravelAi;
+use CristeaIulian\AiOtel\Tests\Fixtures\Agents\AssistantAgent;
 use Illuminate\Support\Facades\Http;
-use Literaj\AiOtel\Attributes\GenAi;
-use Literaj\AiOtel\Attributes\LaravelAi;
-use Literaj\AiOtel\Tests\Fixtures\Agents\AssistantAgent;
 use OpenTelemetry\API\Trace\StatusCode;
 
 function chatCompletion(string $content): array

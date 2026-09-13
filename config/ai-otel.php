@@ -81,7 +81,7 @@ return [
     'capture' => [
         'content' => (bool) env('OTEL_INSTRUMENTATION_GENAI_CAPTURE_MESSAGE_CONTENT', false),
         'max_length' => (int) env('AI_OTEL_CAPTURE_MAX_LENGTH', 8192),
-        'redactor' => null, // class-string<\Literaj\AiOtel\Contracts\Redactor>
+        'redactor' => null, // class-string<\CristeaIulian\AiOtel\Contracts\Redactor>
     ],
 
     /*

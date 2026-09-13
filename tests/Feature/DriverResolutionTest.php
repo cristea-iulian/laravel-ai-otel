@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-use Literaj\AiOtel\Otel\TracerProviderResolver;
-use Literaj\AiOtel\RecorderManager;
-use Literaj\AiOtel\Recorders\NullRecorder;
-use Literaj\AiOtel\Recorders\SpanRecorder;
+use CristeaIulian\AiOtel\Otel\TracerProviderResolver;
+use CristeaIulian\AiOtel\RecorderManager;
+use CristeaIulian\AiOtel\Recorders\NullRecorder;
+use CristeaIulian\AiOtel\Recorders\SpanRecorder;
 use OpenTelemetry\API\Globals;
 use OpenTelemetry\API\Trace\TracerProviderInterface;
 use OpenTelemetry\SDK\Trace\SpanExporter\InMemoryExporter;
