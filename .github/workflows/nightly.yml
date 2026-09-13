@@ -1,0 +1,37 @@
+name: nightly against laravel/ai dev
+
+# laravel/ai is pre-1.0. This job runs the suite against its development
+# branch every night so a renamed event or payload is caught here before a
+# release of the SDK reaches users of this package.
+
+on:
+  schedule:
+    - cron: '17 4 * * *'
+  workflow_dispatch:
+
+jobs:
+  laravel-ai-dev:
+    runs-on: ubuntu-latest
+    name: laravel/ai 0.x-dev
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.4'
+          extensions: mbstring, sqlite3, pdo_sqlite
+          coverage: none
+
+      - name: Install against the SDK development branch
+        run: |
+          composer require "laravel/ai:0.x-dev" --no-interaction --no-update
+          composer update --prefer-dist --no-interaction --no-progress
+
+      - name: Show the SDK commit under test
+        run: composer show laravel/ai | grep -E "^(versions|source)"
+
+      - name: Run tests
+        run: vendor/bin/pest --ci
+
+      - name: Static analysis
+        run: vendor/bin/phpstan analyse --memory-limit=1G --no-progress
