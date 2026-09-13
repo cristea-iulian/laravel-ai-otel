@@ -2,7 +2,7 @@
 
 All notable changes to `cristea-iulian/laravel-ai-otel` are documented here.
 
-## Unreleased
+## v0.1.0 - 2026-09-13
 
 ### Added
 
@@ -11,7 +11,7 @@ All notable changes to `cristea-iulian/laravel-ai-otel` are documented here.
 - `otlp`, `log` and `null` drivers.
 - Opt-in content capture with truncation and a redaction hook.
 
-### Planned
+### Planned (not in this release)
 
 - Metrics: `gen_ai.client.token.usage` and `gen_ai.client.operation.duration`.
 - Spans for image, audio, transcription, reranking and file store operations.
