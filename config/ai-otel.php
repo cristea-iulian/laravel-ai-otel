@@ -35,7 +35,9 @@ return [
             // example by open-telemetry/opentelemetry-auto-laravel). When one
             // exists it is reused and these settings are ignored.
             'endpoint' => env('OTEL_EXPORTER_OTLP_ENDPOINT', 'http://localhost:4318'),
-            'protocol' => env('OTEL_EXPORTER_OTLP_PROTOCOL', 'http/protobuf'), // http/protobuf or http/json
+            // http/protobuf or http/json. Langfuse replies to an OTLP request with a JSON
+            // ingestion-job object rather than a protobuf response, so use http/json there.
+            'protocol' => env('OTEL_EXPORTER_OTLP_PROTOCOL', 'http/protobuf'),
             'headers' => env('OTEL_EXPORTER_OTLP_HEADERS', ''), // "key=value,key2=value2"
             'timeout' => (float) env('OTEL_EXPORTER_OTLP_TIMEOUT', 10),
             'processor' => env('AI_OTEL_SPAN_PROCESSOR', 'batch'), // batch or simple

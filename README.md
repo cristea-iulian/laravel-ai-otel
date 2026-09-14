@@ -91,8 +91,22 @@ OTEL_EXPORTER_OTLP_ENDPOINT=http://localhost:6006
 
 Run any agent, then open <http://localhost:6006>.
 
-For [Langfuse](https://langfuse.com) point the endpoint at `https://cloud.langfuse.com/api/public/otel` and set
-`OTEL_EXPORTER_OTLP_HEADERS="Authorization=Basic <base64(public:secret)>"`.
+For [Langfuse](https://langfuse.com), self-hosted or cloud:
+
+```dotenv
+OTEL_EXPORTER_OTLP_ENDPOINT=https://cloud.langfuse.com/api/public/otel
+OTEL_EXPORTER_OTLP_HEADERS="Authorization=Basic <base64 of public_key:secret_key>"
+OTEL_EXPORTER_OTLP_PROTOCOL=http/json
+```
+
+Langfuse maps the spans onto its own model without any configuration: `invoke_agent` becomes an AGENT
+observation, `chat` a GENERATION carrying the model and the input, output and reasoning token counts, and
+`execute_tool` a TOOL, with the sub-agent nested under the tool that called it.
+
+`http/json` matters. Langfuse answers an OTLP request with a JSON description of the ingestion job rather than
+the protobuf `ExportTraceServiceResponse` the spec calls for. The spans are accepted and stored either way, but
+under the default `http/protobuf` the OpenTelemetry SDK cannot parse that answer and logs an export failure for
+every batch. Asking for `http/json` avoids the noise.
 
 There is a ready-made demo app with a support agent, two tools and a sub-agent at
 [cristea-iulian/laravel-ai-otel-demo](https://github.com/cristea-iulian/laravel-ai-otel-demo). It runs with `--fake`, so no API
